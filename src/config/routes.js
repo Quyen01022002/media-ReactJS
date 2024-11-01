@@ -1,8 +1,9 @@
 const routes = {
   web: {
-    home: "",
+    home: "/home",
     register: "/register",
     login: "/login",
+    profiles: "/profile",
   },
 };
 export default routes;
