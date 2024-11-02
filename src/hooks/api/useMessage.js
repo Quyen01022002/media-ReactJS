@@ -1,11 +1,11 @@
 import { useMutation } from "@tanstack/react-query";
-import { listPost } from "../../services/postServices";
+import { listMessage } from "../../services/messageServices";
 
-export const usePostList = (onSuccess, onError) => {
+export const useMessageList = (onSuccess, onError) => {
   const id = localStorage.getItem("id");
 
   return useMutation({
-    mutationFn: () => listPost(id), // Gọi listPost mà không cần truyền userData
+    mutationFn: () => listMessage(id), // Gọi listPost mà không cần truyền userData
     onSuccess: (data) => {
       onSuccess && onSuccess(data);
     },

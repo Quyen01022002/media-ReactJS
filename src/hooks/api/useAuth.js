@@ -8,6 +8,7 @@ export const useAuth = (onSuccess, onError) => {
       // Lưu token vào localStorage
       localStorage.setItem("token", data.token);
       localStorage.setItem("avatar", data.avatar);
+      localStorage.setItem("id", data.id);
       localStorage.setItem("firstName", data.firstName);
       localStorage.setItem("lastName", data.lastName);
       onSuccess && onSuccess(data);

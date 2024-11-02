@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../components/Header";
 
 export default function Profile() {
   const imageUrl = localStorage.getItem("avatar");
@@ -7,7 +8,8 @@ export default function Profile() {
 
   return (
     <div>
-      <div class="bg-gray-100">
+      <Header />
+      <div class="bg-gray-100 ml-60">
         <div class="container mx-auto py-8">
           <div class="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
             <div class="col-span-4 sm:col-span-3">
@@ -17,16 +19,18 @@ export default function Profile() {
                     src={imageUrl}
                     class="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0"
                   ></img>
-                  <h1 class="text-xl font-bold">{firstName} </h1>
+                  <h1 class="text-xl font-bold">
+                    {firstName} {lastName}
+                  </h1>
                   <div class="mt-6 flex flex-wrap gap-4 justify-center">
                     <a
-                      href="#"
+                      href="/"
                       class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
                     >
                       Contact
                     </a>
                     <a
-                      href="#"
+                      href="/"
                       class="bg-gray-300 hover:bg-gray-400 text-gray-700 py-2 px-4 rounded"
                     >
                       Resume

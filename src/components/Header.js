@@ -72,17 +72,17 @@ export default function Header() {
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
-                  viewBox="0 0 22 21"
+                  viewBox="0 0 24 24"
                 >
-                  <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
-                  <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
+                  <path d="M10 2a8 8 0 0 1 8 8c0 1.61-.47 3.1-1.3 4.37l4.58 4.58a1 1 0 0 1-1.42 1.42l-4.58-4.58A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z" />
                 </svg>
+
                 <span class="ms-3">Search</span>
               </a>
             </li>{" "}
             <li>
               <a
-                href="/"
+                href="/message"
                 class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg

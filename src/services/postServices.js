@@ -1,10 +1,12 @@
 // src/services/authService.js
 import axiosInstance from "../api/axiosInstance";
 
-export const listPost = async (email, password) => {
-  const response = await axiosInstance.post("/media/authenticate", {
-    email,
-    password,
+export const listPost = async (id) => {
+  const token = localStorage.getItem("token"); // Lấy token từ localStorage
+  const response = await axiosInstance.get(`/post/${id}`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
   });
   return response.data;
 };
