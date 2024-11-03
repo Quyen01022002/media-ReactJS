@@ -5,6 +5,7 @@ const routes = {
     login: "/login",
     profiles: "/profile",
     message: "/message",
+    createPost: "/createpost",
   },
 };
 export default routes;

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useMessageList } from "../../hooks/api/useMessage";
 
-export default function UserList() {
+export default function UserList({ onSelectUser }) {
   const {
     mutate: fetchPosts,
     data,
@@ -70,7 +70,10 @@ export default function UserList() {
       </header>
       <div class="overflow-y-auto h-screen p-3 mb-9 pb-20">
         {data?.payload?.map((mess) => (
-          <div class="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
+          <div
+            class="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md"
+            onClick={() => onSelectUser(mess)}
+          >
             <div class="w-12 h-12 bg-gray-300 rounded-full mr-3">
               <img
                 src={mess.avatar}
@@ -79,8 +82,10 @@ export default function UserList() {
               />
             </div>
             <div class="flex-1">
-              <h2 class="text-lg font-semibold">{mess.name}</h2>
-              <p class="text-gray-600">{mess.messagesList[0]?.content}</p>
+              <h2 class="text-lg font-semibold text-left">{mess.name}</h2>
+              <p class="text-gray-600 text-left">
+                {mess.messagesList[0]?.content}
+              </p>
             </div>
           </div>
         ))}
